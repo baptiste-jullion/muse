@@ -10,7 +10,9 @@
 		"postinstall": "nuxt prepare"
 	},
 	"dependencies": {
+		"lenis": "^1.1.13",
 		"nuxt": "^3.13.0",
+		"prettier-plugin-tailwindcss": "^0.6.8",
 		"vue": "latest",
 		"vue-router": "latest"
 	},
