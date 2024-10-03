@@ -9,5 +9,5 @@ export default defineNuxtConfig({
 		},
 		download: true,
 	},
-	css: ["~/assets/css/tailwind.css"],
+	css: ["~/assets/css/tailwind.css", "~/assets/css/lenis.css"],
 });
