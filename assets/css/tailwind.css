@@ -1,3 +1,51 @@
 @tailwind base;
-@tailwind components;
+
+@layer base {
+    * {
+        @apply transition-all;
+    }
+
+    body {
+        @apply font-sans antialiased bg-white bg-[url('/bg-pattern.png')] bg-center leading-tight bg-fixed text-black;
+    }
+
+    h1 {
+        @apply text-h1-mobile lg:text-h1 font-bold;
+    }
+
+    h2 {
+        @apply text-h2-mobile lg:text-h2 font-semibold;
+    }
+
+    h3 {
+        @apply text-h3-mobile lg:text-h3 font-semibold;
+    }
+
+    p {
+        @apply text-paragraph font-normal;
+    }
+
+    a {
+        @apply block;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-black/10;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-black/80;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-black;
+    }
+}
+
 @tailwind utilities;
+
+@tailwind components;
