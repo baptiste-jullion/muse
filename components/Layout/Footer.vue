@@ -34,7 +34,7 @@ const widgets = [
   },
   {
     title: "Témoignages",
-    links: ["Offres spéciales", "Carrières", "Contact", "FAQ"],
+    links: ["Offres spéciales", "Carrières", "Contact"],
   },
   {
     title: "Blog",
