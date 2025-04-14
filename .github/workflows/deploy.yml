@@ -1,8 +1,8 @@
-name: Deploy on push to main
+name: Deploy Nuxt3 Bun App
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   deploy:
@@ -17,13 +17,13 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan -p 12018 -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy via SSH
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.HOST }} << 'EOF'
+          ssh -p 12018 ${{ secrets.SSH_USER }}@${{ secrets.HOST }} << 'EOF'
             cd /home/sites/baptiste-jullion.dev/muse
-            git pull origin main
+            git pull origin master
             docker build -t muse .
             docker stop muse-website || true
             docker rm muse-website || true
