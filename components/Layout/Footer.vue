@@ -26,7 +26,7 @@
 const widgets = [
   {
     title: "L'application",
-    links: ["A propos", "Fonctionnalités", "Partenaires", "FAQ"],
+    links: ["À propos", "Fonctionnalités", "Partenaires", "FAQ"],
   },
   {
     title: "Aide",
