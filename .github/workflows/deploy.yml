@@ -27,5 +27,5 @@ jobs:
             docker build -t muse .
             docker stop muse-website || true
             docker rm muse-website || true
-            docker run -d --name muse-website -p 42561:42561 muse
+            docker run -d --name muse-website -p 42561:42561 --restart unless-stopped muse
           EOF
