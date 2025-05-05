@@ -10,4 +10,12 @@ export default defineNuxtConfig({
 		download: true,
 	},
 	css: ["~/assets/css/tailwind.css", "~/assets/css/lenis.css"],
+	app: {
+		head: {
+	        title: "Muse",
+	        htmlAttrs: {
+		        lang: "fr",
+		}
+	    }
+	},
 });
