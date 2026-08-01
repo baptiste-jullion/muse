@@ -8,7 +8,7 @@ RUN bun install
 
 RUN bun run build
 
-EXPOSE 42561
+EXPOSE 3000
 
 # Start the Nuxt 3 application with Bun
-CMD ["sh", "-c", "PORT=42561 bun .output/server/index.mjs"]
+CMD ["sh", "-c", "bun .output/server/index.mjs"]
