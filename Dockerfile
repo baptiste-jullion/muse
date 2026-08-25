@@ -1,14 +1,12 @@
-FROM oven/bun:latest
+FROM oven/bun:1.3
 
 WORKDIR /app
 
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
+
 COPY . .
-
-RUN bun install
-
 RUN bun run build
 
 EXPOSE 3000
-
-# Start the Nuxt 3 application with Bun
-CMD ["sh", "-c", "bun .output/server/index.mjs"]
+CMD ["bun", ".output/server/index.mjs"]
